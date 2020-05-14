@@ -1,0 +1,22 @@
+Return-Path: <zhim@localhost>
+Delivered-To: 123@localhost
+Received: from 127.0.0.1 ([127.0.0.1])
+          by DESKTOP-O5HQJCD (JAMES SMTP Server 2.3.2) with SMTP ID 966;
+          Mon, 27 Apr 2020 20:11:03 +0900 (KST)
+Date: Mon, 27 Apr 2020 20:11:03 +0900 (KST)
+From: zhim
+To: 123
+Cc: asdf
+Message-ID: <493951218.1.1587985863770@DESKTOP-O5HQJCD>
+Subject: asdf
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_0_133806144.1587985863707"
+User-Agent: LJM-WM/0.1
+
+------=_Part_0_133806144.1587985863707
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+asdf
+------=_Part_0_133806144.1587985863707--
