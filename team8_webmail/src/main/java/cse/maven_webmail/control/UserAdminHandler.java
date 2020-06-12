@@ -95,7 +95,6 @@ public class UserAdminHandler extends HttpServlet {
         successPopUp.append("<head>");
 
         successPopUp.append("<title>메일 전송 결과</title>");
-        successPopUp.append("<link type=\"text/css\" rel=\"stylesheet\" href=\"css/main_style.css\" />");
         successPopUp.append("</head>");
         successPopUp.append("<body onload=\"goMainMenu()\">");
         successPopUp.append("<script type=\"text/javascript\">");

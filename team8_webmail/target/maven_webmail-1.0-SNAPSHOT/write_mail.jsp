@@ -38,7 +38,7 @@
             <jsp:include page="sidebar_previous_menu.jsp" />
         </div>
 
-        <div id="main" style=" float: left;width: 65%;margin-top:5%; margin-bottom : 5%;">
+        <div id="main" style=" float: left;width: 65%; margin-top:5%;">
                  <jsp:include page="mail_send_form.jsp" />
                
         </div>

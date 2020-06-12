@@ -7,14 +7,7 @@
 
 <!DOCTYPE html>
 
-<html style="background-image:url('img/mail.PNG');">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <br> <br>
-        
+
+<div style="float:left;width: 33%;padding-left: 5%;padding-top: 5%">        
         <a href="admin_menu.jsp"> 이전 메뉴로 </a>
-    </body>
-</html>
+</div>

@@ -26,12 +26,12 @@
     SELECT user_nickname, user_email FROM ${table} WHERE user_id="${owner}"
 </sql:query>
 
-<table border="1">
+<table id="dtBasicExample" class="tb table table-striped table-bordered table-sm" cellspacing="0">
     <thead>
         <tr>
-            <th>이메일</th>
-            <th>별명</th>
-            <th><a herf="">삭제</a></th>
+            <th class="th-sm white-text" >이메일</th>
+            <th class="th-sm white-text">별명</th>
+            <th class="th-sm white-text"><a herf="">삭제</a></th>
         </tr>
     </thead>
     <tbody>
@@ -39,9 +39,6 @@
             <tr>
                 <td>${row.user_email}</td>
                 <td>${row.user_nickname}</td>
-                <%--
-                <td>${row.phone}</td>
-                --%>
                 <td>삭제</td>
             </tr>
         </c:forEach>

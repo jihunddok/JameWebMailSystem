@@ -12,29 +12,44 @@
 <jsp:setProperty name="pop3" property="userid" value="${userid}"/>
 <jsp:setProperty name="pop3" property="password" value="${password}"/>
 
-<html style="background-image:url('img/mail.PNG');transition: margin-left .5s;
-  padding: 20px;">
+<html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>메일 보기 화면</title>
-        <link type="text/css" rel="stylesheet" href="css/main_style.css" />
+        <link type="text/css" rel="stylesheet" href="css/materialize.css" />
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/mdb.min.css" rel="stylesheet">
+        <link href="css/addons/datatables.min.css" rel="stylesheet">
     </head>
-    <body>
+    <body style="background-image:url('img/mail.PNG'); background-repeat: no-repeat; background-size:cover">
         <jsp:include page="header.jsp" />
 
         <div id="sidebar">
             <jsp:include page="sidebar_previous_menu.jsp" />
         </div>
+        <div class="row left-align" style="margin-left:20%;margin-right: 25%;margin-top:10%">
+            <div class="col m6">
+                <div class="card " style="background-color:rgb(54,52,52)">
+                    <div class="card-content">
+                        <div class="container " >
+                             <a style="float: right; " href="http://localhost:8080/maven_webmail/ReadMail.do?menu=41&msgid=<%=request.getParameter("msgid")%>">delete mail</a>
+                            <span class="card-title blue-grey-text text-lighten-2 ">MAIL</span>
+                            <br>
+                            
+                            <div class="white-text" id="msgBody" >
+                                <%= pop3.getMessage(Integer.parseInt((String) request.getParameter("msgid")))%>
 
-        <div id="msgBody">
-            <%= pop3.getMessage(Integer.parseInt((String) request.getParameter("msgid")))%>
-            <br>
-            <a href="http://localhost:8080/maven_webmail/ReadMail.do?menu=41&msgid=<%=request.getParameter("msgid")%>"> delete </a>
-            
+                               
+                            </div>          
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
+        <%@include file="footer.jspf"%>
 
-
-        <jsp:include page="footer.jsp" />
 
 
     </body>

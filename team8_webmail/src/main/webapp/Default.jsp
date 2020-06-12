@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Insert title here</title>
 </head>
-<body>
+<body style="background-image:url('img/mail.PNG'); background-repeat: no-repeat; background-size:cover">
 <%
 	String id = request.getParameter("txtuserid");
 	String pw = request.getParameter("txtpassword");

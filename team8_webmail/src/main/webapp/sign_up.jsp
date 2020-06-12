@@ -15,37 +15,42 @@
     <body style="height:100vh;">
         <%@include file="header.jspf"%>
         <br>
-        <div style="display: flex;">
-            <form action="SignUp.do" method="POST">
-              
-                <p>아이디</p>
-                <p>영문자와 숫자를 조합한 8~12자</p>
-                    
-                <input type="text" placeholder="new id"
-                       name="id" id="newID" required
-                       pattern="[A-Za-z0-9+]{8,12}"/>
-                <input type="button" onclick="checkId()" value="중복확인" required/>
+        <div class="row left-align" style="margin-left:40%;margin-right: 10%;margin-top:5%">
+            <div class="col s12 m6">
+                <div class="card " style="background-color:rgb(54,52,52)">
+
+                    <div class="card-content white-text">
+                        <div class="container " id="sign_up_form">
+                            <span class="card-title blue-grey-text text-lighten-2 ">SIGN UP</span>
+                            <div class="input-field white-text">
+                                <form action="SignUp.do" method="POST">
+
+                                    <p>ID</p>
+                                    <input class="white-text" type="text" placeholder="new id"
+                                           name="id" id="newID" required
+                                           pattern="[A-Za-z0-9+]{8,12}" />
+                                    <input class="btn-small grey" type="button" onclick="checkId()" value="Duplicated?" required style="margin-bottom: 20%"/>
 
 
-                <p>암호</p>
-                <p>영문자와 숫자를 조합한 6~14자</p>
-                <input type="password" placeholder="new passwd"
-                       id="passwd" name="passwd"
-                       pattern="[A-Za-z0-9+]{6,14}$"/>
-                <p>암호 확인</p>
-                <input type="password" placeholder="repeat passwd" id="passwdRepeat"
-                       oninput="isPasswdMatched()"/>
-                <input type="submit" value="가입신청" id="btnSignUp" disabled/>
-
-            </form>
-            
-                      
-                   
-                  
-                        
-                    
+                                    <p>PW</p>
+                                    <input class="white-text" type="password" placeholder="new passwd"
+                                           id="passwd" name="passwd"
+                                           pattern="[A-Za-z0-9+]{6,14}$" style="margin-bottom: 20%"/>
+                                    
+                                    <p>Confrim your password</p>
+                                    <input class="white-text" type="password" placeholder="repeat passwd" id="passwdRepeat"
+                                           oninput="isPasswdMatched()" style="margin-bottom: 20%"/>
+                                    <input class="btn-small grey" type="submit" value="Submit" id="btnSignUp" disabled style="margin-bottom: 20%"/>
+                                    <input class="btn-small grey" type="submit" value="Cancel" id="btnCancel" onclick="location.href = 'index.jsp'"  style="margin-bottom: 20%"/>
+                                    
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <%@include file="footer.jspf"%>
+                        <%@include file="footer.jspf"%>
     </body>
     <script>
         let isIdChecked = false;
@@ -62,6 +67,7 @@
         }
         //id 중복확인
         function checkId() {
+            console.log("connecting..");
             const xhr = new XMLHttpRequest();
             const id = document.getElementById("newID").value;
             if (id == "") {
@@ -71,11 +77,12 @@
             xhr.open('POST', '/maven_webmail/IdCheck.do', true);
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4 && xhr.status === 200) {
-                    if (xhr.responseText === 'True') {//???
+                    if (xhr.responseText === 'duplicated') {//???
                         //중복
+                        console.log("duplicated");
                         alert("duplicated id.");
                         isIdChecked = false;
-                    } else if (xhr.responseText === 'False') {///???
+                    } else if (xhr.responseText === 'ok') {///???
                         //사용가능
                         alert("you can use this id.");
                         isIdChecked = true;

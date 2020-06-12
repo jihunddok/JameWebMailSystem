@@ -79,10 +79,10 @@ public class IdCheckHandler extends HttpServlet {
             UserAdminAgent agent = new UserAdminAgent(server, port, this.getServletContext().getRealPath("."));
             if (agent.verify(id)) {
                 //이미존재하는 id
-                out.write("T");
+                out.write("duplicated");
             } else {
                 //사용가능한 id
-                out.write("F");
+                out.write("ok");
             }
         } catch (Exception ex) {
             out.write("error" + ex);
