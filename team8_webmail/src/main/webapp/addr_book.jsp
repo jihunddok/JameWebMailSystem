@@ -10,20 +10,22 @@
 <%@taglib tagdir="/WEB-INF/tags" prefix="mytags" %>
 <c:set var="userId" value="${userid}"/>
 <!DOCTYPE html>
-<html style="background-image:url('img/mail.PNG');">
+<html>
     <head>
 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title><%= session.getAttribute("userid")%>님의 주소록</title>
-        <link type="text/css" rel="stylesheet" href="css/materialize.css" />
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css" />
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/mdb.min.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
+    
         <link href="css/addons/datatables.min.css" rel="stylesheet">
+         <link href="css/addons/datatables.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script>console.log("${userId}")</script>
     </head>
     <body style="background-image:url('img/mail.PNG'); background-repeat: no-repeat; background-size:cover">
-        <jsp:include page="header.jsp" />
+      <%@include file="header.jspf"%>
 
         <div id="sidebar">
             <jsp:include page="sidebar_previous_menu.jsp" />
@@ -60,6 +62,7 @@
 
             </script>
 
-        <jsp:include page="footer.jsp" />
+        <%@include file="footer.jspf"%>
+
     </body>
 </html>

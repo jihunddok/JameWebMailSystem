@@ -1,10 +1,5 @@
-<%-- 
-    Document   : header.jspf
-    Author     : jihun
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <div>
-    <p class="white-text " style="font-style: bold; font-family: 'Sans-serif';"> &nbsp; Current Host : <%= session.getAttribute("host")%></p>
+    
+    <p class="white-text" style="font-style: bold; font-family: 'Sans-serif'; background-color: black"> &nbsp; Current Host : <%= session.getAttribute("host")%></p>
+
 </div>

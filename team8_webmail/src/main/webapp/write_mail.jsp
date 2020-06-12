@@ -11,11 +11,11 @@
 <%-- @taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core" --%>
 <% request.setCharacterEncoding("UTF-8");%>
 
-<html style="background-image:url('img/mail.PNG');">
+<html >
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>메일 쓰기 화면</title>    
-        <link type="text/css" rel="stylesheet" href="css/materialize.css" />
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css" />
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/mdb.min.css" rel="stylesheet">
         <link href="css/addons/datatables.min.css" rel="stylesheet">

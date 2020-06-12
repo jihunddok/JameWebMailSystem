@@ -1,3 +1,4 @@
+cse\maven_webmail\model\UserAgent.class
 cse\maven_webmail\model\FormParser.class
 cse\maven_webmail\control\LoginHandler.class
 cse\maven_webmail\model\UserAdminAgent.class
