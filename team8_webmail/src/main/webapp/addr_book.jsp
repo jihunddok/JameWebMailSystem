@@ -12,9 +12,14 @@
 <!DOCTYPE html>
 <html style="background-image:url('img/mail.PNG');">
     <head>
+        
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title><%= session.getAttribute("userid") %>님의 주소록</title>
-        <link type="text/css" rel="stylesheet" href="css/main_style.css" />
+        <link type="text/css" rel="stylesheet" href="css/materialize.css" />
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/mdb.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/addons/datatables.min.css" rel="stylesheet">
         <script>console.log("${userId}")</script>
     </head>
     <body>

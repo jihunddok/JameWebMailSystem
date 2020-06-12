@@ -27,8 +27,8 @@ public class MessageParser {
     private String subject;
     private String body;
     private String fileName;
-    private final String downloadTempDir = "C:/temp/download/";
-    private String userid;
+     private final String downloadTempDir = "../downloads";
+     private String userid;
 
     public MessageParser(Message message, String userid) {
         this.message = message;
@@ -64,6 +64,12 @@ public class MessageParser {
             ccAddress = "";
         }
         subject = message.getSubject();
+        if(subject.equals("")){
+            subject = subject.replace("", "제목없음");
+        }
+        sentDate = message.getSentDate().toString();
+        
+        sentDate = sentDate.substring(0, sentDate.length() - 8);  // 8 for "KST 20XX"
         sentDate = message.getSentDate().toString();
         sentDate = sentDate.substring(0, sentDate.length() - 8);  // 8 for "KST 20XX"
     }
@@ -88,8 +94,8 @@ public class MessageParser {
 
                 String filename = MimeUtility.decodeText(p.getFileName());
                 // 파일명에 " "가 있을 경우 서블릿에 파라미터로 전달시 문제 발생함.
-                // "스페이스바 공백 "를 모두 "_"로 대체함.
-//                filename = filename.replaceAll("%20", " ");
+                // " "를 모두 "_"로 대체함.
+                filename = filename.replaceAll("[+]", " ");
                 DataHandler dh = p.getDataHandler();
                 FileOutputStream fos = new FileOutputStream(tempUserDir + "/" + filename);
                 dh.writeTo(fos);

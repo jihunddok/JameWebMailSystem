@@ -8,14 +8,14 @@
 
 <!DOCTYPE html>
 
-<html style="background-image:url('img/mail.PNG');">
+<html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>사용자 추가 화면</title>
         <link type="text/css" rel="stylesheet" href="css/main_style.css" />
     </head>
     <body>
-        <jsp:include page="header.jsp" />
+        <%@include file="header.jspf"%>
 
         <div id="sidebar">
             <jsp:include page="sidebar_admin_previous_menu.jsp" />
@@ -46,6 +46,6 @@
             </form>
         </div>
 
-        <jsp:include page="footer.jsp" />
+        <%@include file="footer.jspf"%>
     </body>
 </html>

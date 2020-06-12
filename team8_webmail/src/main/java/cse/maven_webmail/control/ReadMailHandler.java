@@ -23,10 +23,9 @@ import cse.maven_webmail.model.Pop3Agent;
  */
 public class ReadMailHandler extends HttpServlet {
 
-    private final String homeDirectory = "/maven_webmail/";
-    private final String uploadTempDir = "C:/temp/upload";
-    private final String uploadTargetDir = "C:/temp/upload";
-
+private final String homeDirectory = "/maven_webmail/";
+    private final String uploadTempDir = "../upload";
+    private final String uploadTargetDir = "../upload";
     /** 
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
      * @param request servlet request

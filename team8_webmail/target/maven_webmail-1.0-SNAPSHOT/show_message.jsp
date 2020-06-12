@@ -8,12 +8,9 @@
 <!DOCTYPE html>
 
 <jsp:useBean id="pop3" scope="page" class="cse.maven_webmail.model.Pop3Agent" />
-<%
-            pop3.setHost((String) session.getAttribute("host"));
-            pop3.setUserid((String) session.getAttribute("userid"));
-            pop3.setPassword((String) session.getAttribute("password"));
-%>
-
+<jsp:setProperty name="pop3" property="host" value="${host}"/>
+<jsp:setProperty name="pop3" property="userid" value="${userid}"/>
+<jsp:setProperty name="pop3" property="password" value="${password}"/>
 
 <html style="background-image:url('img/mail.PNG');transition: margin-left .5s;
   padding: 20px;">

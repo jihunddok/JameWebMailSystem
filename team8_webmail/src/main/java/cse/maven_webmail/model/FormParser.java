@@ -25,7 +25,8 @@ public class FormParser {
     private String subject = null;
     private String body = null;
     private String fileName = null;
-    private final String uploadTargetDir = "C:/temp/upload";
+    private final String uploadTargetDir = "../upload";
+
 
     public FormParser(HttpServletRequest request) {
         this.request = request;

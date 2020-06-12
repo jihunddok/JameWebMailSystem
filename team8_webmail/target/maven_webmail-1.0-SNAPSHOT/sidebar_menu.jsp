@@ -7,12 +7,12 @@
 <%@page import="cse.maven_webmail.control.CommandType" %>
 
 <!DOCTYPE html>
-
- <div class="sidenav">
-        <span class="white-text"> <strong>사용자: <%= session.getAttribute("userid") %> </strong> </span> <br>
+<div style="float:left;width: 33%;padding-left: 5%;padding-top: 5%">
+    <span class="white-text"> <strong style="font-size: 30pt; "><%= session.getAttribute("userid") %> </strong> </span> <br>
         
-        <p class="white-text"> <a href="main_menu.jsp"> 메일 읽기 </a> </p>
-        <p class="white-text"> <a href="write_mail.jsp"> 메일 쓰기 </a> </p>
-        <p class="white-text"> <a href="addr_book.jsp"> 주소록 </a> </p>    
-        <p class="white-text"><a href="Login.do?menu=<%= CommandType.LOGOUT %>">로그아웃</a></p>
- </div>
+        <p class="white-text" style="padding-top: 10%"> menu</p>
+        <p class="white-text"> <a href="main_menu.jsp"> mail box </a> </p>
+        <p class="white-text"> <a href="write_mail.jsp"> send mail </a> </p>
+        <p class="white-text"> <a href="addr_book.jsp"> address book </a> </p>    
+        <p class="white-text"><a href="Login.do?menu=<%= CommandType.LOGOUT %>">logout</a></p>
+</div>

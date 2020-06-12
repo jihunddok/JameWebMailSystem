@@ -8,17 +8,15 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="cse.maven_webmail.control.CommandType"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 
-<%
-    if (session.isNew()) {
-        session.setAttribute("host", "localhost");   // should be modified if you change the POP3 server
-        session.setAttribute("debug", "false");
-        //session.setAttribute("pageno", "1");
-        //session.setMaxInactiveInterval(session.getMaxInactiveInterval() * 2);
-    }
-%>
+
+<c:if test="${empty session.isNew()}">
+    <c:set var="host" value="localhost" scope="session"/>
+    <c:set var="debug" value="false" scope="session"/>
+</c:if>
 
 <html style="background-image:url('img/mail.PNG');">
 
