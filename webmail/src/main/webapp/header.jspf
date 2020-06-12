@@ -7,5 +7,5 @@
 
 <div id="login_header">
     웹메일 시스템 <br />
-    (<%= session.getAttribute("host")%>)
+    (${sessionScope.host})
 </div>

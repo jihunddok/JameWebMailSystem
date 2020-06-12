@@ -38,7 +38,6 @@ public class LoginHandler extends HttpServlet {
         PrintWriter out = response.getWriter();
         int selected_menu = Integer.parseInt((String) request.getParameter("menu"));
 
-
         try {
             switch (selected_menu) {
                 case CommandType.LOGIN:
@@ -48,7 +47,7 @@ public class LoginHandler extends HttpServlet {
 
                     // Check the login information is valid using <<model>>Pop3Agent.
                     Pop3Agent pop3Agent = new Pop3Agent(host, userid, password);
-                    boolean isLoginSuccess = pop3Agent.validate();
+                    boolean isLoginSuccess = pop3Agent.validate(); 
 //                    boolean isLoginSuccess = false;
 
                     // Now call the correct page according to its validation result.
@@ -78,6 +77,7 @@ public class LoginHandler extends HttpServlet {
                 default:
                     break;
             }
+                
         } catch (Exception ex) {
             System.err.println("LoginCheck - LOGIN error : " + ex);
         } finally {

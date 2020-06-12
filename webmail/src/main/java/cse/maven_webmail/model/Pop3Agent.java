@@ -6,12 +6,14 @@
 package cse.maven_webmail.model;
 
 import java.util.Properties;
+import javax.mail.Address;
 import javax.mail.FetchProfile;
 import javax.mail.Flags;
 import javax.mail.Folder;
 import javax.mail.Message;
 import javax.mail.Session;
 import javax.mail.Store;
+import javax.mail.internet.InternetAddress;
 
 /**
  *
@@ -130,7 +132,6 @@ public class Pop3Agent {
             folder.open(Folder.READ_ONLY);
 
             Message message = folder.getMessage(n);
-
             MessageFormatter formatter = new MessageFormatter(userid);
             result = formatter.getMessage(message);
 
@@ -189,6 +190,10 @@ public class Pop3Agent {
 
     public void setUserid(String userid) {
         this.userid = userid;
+    }
+    
+    public String getfrom(int n){
+        return ((InternetAddress) from[n]).getAddress();
     }
 }  // class Pop3Agent
 

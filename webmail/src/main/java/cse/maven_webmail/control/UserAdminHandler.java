@@ -36,13 +36,15 @@ public class UserAdminHandler extends HttpServlet {
 //        RequestDispatcher view = request.getRequestDispatcher("main_menu.jsp");
             // Validate if userid == "admin"
             HttpSession session = request.getSession();
+            
+            /* // 모든 사용자가 사용자 추가 기능 사용할 수 있도록 주석처리
             String userid = (String) session.getAttribute("userid");
             if (userid == null || !userid.equals("admin")) {
                 out.println("현재 사용자(" + userid + ")의 권한으로 수행 불가합니다.");
                 out.println("<a href=/WebMailSystem/> 초기 화면으로 이동 </a>");
                 return;
             } else {
-
+            */
                 request.setCharacterEncoding("UTF-8");
                 int select = Integer.parseInt((String) request.getParameter("menu"));
 
@@ -59,7 +61,7 @@ public class UserAdminHandler extends HttpServlet {
                         out.println("없는 메뉴를 선택하셨습니다. 어떻게 이 곳에 들어오셨나요?");
                         break;
                 }
-            }
+            //}
         } catch (Exception ex) {
             System.err.println(ex.toString());
         }
@@ -103,7 +105,7 @@ public class UserAdminHandler extends HttpServlet {
         successPopUp.append("alert(\"");
         successPopUp.append(alertMessage);
         successPopUp.append("\"); ");
-        successPopUp.append("window.location = \"admin_menu.jsp\"; ");
+        successPopUp.append("window.location = \"index.jsp\"; ");
         successPopUp.append("}  </script>");
         successPopUp.append("</body></html>");
         return successPopUp.toString();
@@ -124,7 +126,7 @@ public class UserAdminHandler extends HttpServlet {
         successPopUp.append("alert(\"");
         successPopUp.append(alertMessage);
         successPopUp.append("\"); ");
-        successPopUp.append("window.location = \"admin_menu.jsp\"; ");
+        successPopUp.append("window.location = \"index.jsp\"; ");
         successPopUp.append("}  </script>");
         successPopUp.append("</body></html>");
         return successPopUp.toString();
@@ -136,6 +138,11 @@ public class UserAdminHandler extends HttpServlet {
         try {
             UserAdminAgent agent = new UserAdminAgent(server, port, this.getServletContext().getRealPath("."));
             String[] deleteUserList = request.getParameterValues("selectedUsers");
+            // 값 넘어온거 확인
+            for(String userlist : deleteUserList){
+                System.out.println(userlist);
+            }
+            
             agent.deleteUsers(deleteUserList);
             response.sendRedirect("admin_menu.jsp");
         } catch (Exception ex) {

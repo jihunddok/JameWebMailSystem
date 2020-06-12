@@ -3,7 +3,7 @@
     Author     : jongmin
 --%>
 
-<%@page pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <div id="footer">
     &copy; 2010, Professor Jong Min Lee <br />
