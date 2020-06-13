@@ -31,8 +31,6 @@ public class UserAdminAgent {
     private String ADMIN_ID; //  = "admin";
     private final String EOL = "\r\n";
     String cwd;
-    
-    public UserAdminAgent(){}
 
     public UserAdminAgent(String server, int port, String cwd) throws Exception {
         System.out.println("UserAdminAgent created: server = " + server + ", port = " + port);
@@ -49,30 +47,6 @@ public class UserAdminAgent {
         isConnected = connect();
     }
 
-    public String getServer() {
-        return server;
-    }
-
-    public void setServer(String server) {
-        this.server = server;
-    }
-
-    public int getPort() {
-        return port;
-    }
-
-    public void setPort(int port) {
-        this.port = port;
-    }
-
-    public String getCwd() {
-        return cwd;
-    }
-
-    public void setCwd(String cwd) {
-        this.cwd = cwd;
-    }
-    
     private void initialize() {
         Properties props = new Properties();
         String propertyFile =  this.cwd + "/WEB-INF/classes/config/system.properties";

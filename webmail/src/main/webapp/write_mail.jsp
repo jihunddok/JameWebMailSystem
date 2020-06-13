@@ -18,16 +18,10 @@
         <link type="text/css" rel="stylesheet" href="css/main_style.css" />
     </head>
     <body>
-        <%@include file="header.jspf"%>
-
-        <div id="sidebar">
-            <jsp:include page="sidebar_previous_menu.jsp" />
-        </div>
 
         <div id="main">
             <jsp:include page="mail_send_form.jsp" />
         </div>
 
-        <%@include file="footer.jspf"%>
     </body>
 </html>

@@ -17,6 +17,14 @@
     <c:set var="debug" value="false" scope="session"/>
 </c:if>
 
+<%-- // session 속성값이 들어가는지 확인
+    String host = (String)session.getAttribute("host");
+    String debug = (String)session.getAttribute("debug");
+    
+    System.out.println("host : " + host);
+    System.out.println("debug : " + debug);
+--%>
+
 
 <%--
             if (session.isNew()) {
@@ -35,7 +43,7 @@
     </head>
 
     <body>
-        <%@include file="header.jspf"%>
+        <%@include file="header.jsp"%>
 
 
         <div id="login_form">

@@ -19,7 +19,6 @@
 -->
 </script>
 
-
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -27,12 +26,6 @@
         <link type="text/css" rel="stylesheet" href="css/main_style.css" />
     </head>
     <body>
-    <%@include file="header.jspf"%>
-
-    <div id="sidebar">
-        <%-- 사용자 추가때와 동일하므로 같은 메뉴 사용함. --%>
-        <jsp:include page="sidebar_admin_previous_menu.jsp" />
-    </div>
 
     <div id="main">
         <h2> 삭제할 사용자를 선택해 주세요. </h2> <br>
@@ -42,7 +35,7 @@
             String cwd = this.getServletContext().getRealPath(".");
         %>
         <jsp:useBean id="userAgent" scope="page" class="cse.maven_webmail.model.UserAgent" />
-        <c:set target="${userAgent}" property="cwd" value="${cwd}" />
+        <c:set target="${userAgent}" property="cwd" value="<%= cwd %>" />
 
         <form name="DeleteUser" action="UserAdmin.do?menu=<%=CommandType.DELETE_USER_COMMAND%>"
               method="POST">
@@ -65,6 +58,5 @@
         </form>
     </div>
 
-    <%@include file="footer.jspf"%>
 </body>
 </html>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/WEB-INF/decorators">
+    
+    <decorator name="user_menu_page" page="user_menu_decorator.jsp">
+        <pattern>/show_message.jsp</pattern>
+        <pattern>/write_mail.jsp</pattern>
+    </decorator>
+    
+    <decorator name="admin_menu_page" page="admin_menu_decorator.jsp">
+        <pattern>/add_user.jsp</pattern>
+        <pattern>/delete_user.jsp</pattern>
+    </decorator>
+    
+    <excludes>
+        
+    </excludes>
+</decorators>

@@ -14,6 +14,12 @@
 <c:set target="${pop3}" property="userid" value="${userid}" />
 <c:set target="${pop3}" property="password" value="${password}" />
 
+<%-- // c:set으로 pop3 객체의 속성값이 제대로 지정되었는지 확인
+    System.out.println("host : " + pop3.getHost());
+    System.out.println("userid : " + pop3.getUserid());
+    System.out.println("password : " + pop3.getPassword());
+--%>
+
  <%--
 <jsp:setProperty name="pop3" property="host" value="${host}"/>
 <jsp:setProperty name="pop3" property="userid" value="${userid}"/>

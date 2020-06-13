@@ -192,8 +192,5 @@ public class Pop3Agent {
         this.userid = userid;
     }
     
-    public String getfrom(int n){
-        return ((InternetAddress) from[n]).getAddress();
-    }
 }  // class Pop3Agent
 

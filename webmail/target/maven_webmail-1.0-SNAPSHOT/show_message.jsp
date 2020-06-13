@@ -4,15 +4,15 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 
  
  <jsp:useBean id="pop3" scope="page" class="cse.maven_webmail.model.Pop3Agent" />
 <!-- 세션값 받아오는 부분 jstl로 변경 -->
-<jsp:setProperty name="pop3" property="host" value="${host}"/>
-<jsp:setProperty name="pop3" property="userid" value="${userid}"/>
-<jsp:setProperty name="pop3" property="password" value="${password}"/>
+<c:set target="${pop3}" property="host" value="${host}" />
+<c:set target="${pop3}" property="userid" value="${userid}" />
+<c:set target="${pop3}" property="password" value="${password}" />
 
 <%--
             pop3.setHost((String) session.getAttribute("host"));
@@ -28,11 +28,6 @@
         <link type="text/css" rel="stylesheet" href="css/main_style.css" />
     </head>
     <body>
-        <%@include file="header.jspf"%>
-
-        <div id="sidebar">
-            <jsp:include page="sidebar_previous_menu.jsp" />
-        </div>
 
         <div id="msgBody">
             <!-- jstl, el 표현식으로 못바꾸나? -->
@@ -40,10 +35,5 @@
 
         </div>
         
-
-
-        <%@include file="footer.jspf"%>
-
-
     </body>
 </html>

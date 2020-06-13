@@ -32,7 +32,7 @@
                         String cwd =  this.getServletContext().getRealPath(".");
             %>
             <jsp:useBean id="userAgent" scope="page" class="cse.maven_webmail.model.UserAgent" />
-            <c:set target="${userAgent}" property="cwd" value="${cwd}" />
+            <c:set target="${userAgent}" property="cwd" value="<%= cwd %>" />
             
             <%-- <jsp:setProperty name="userAgent" property="cwd" value="<%= cwd %>"/> --%>
             <%--

@@ -21,30 +21,17 @@ public class UserAgent {
 
     private UserAdminAgent agent;
     List<String> userList = new LinkedList<String>();
-    private String[] productList = {"test1","test2","test3","test4","test5"};
-    private int num1 =30;
-    private int num2=50;
     
     public UserAgent(){
         
     }
-    
-    public String[] getProductList() {
-        return productList;
-    }
-    
+
     public List<String> getUserList() throws Exception{
         agent = new UserAdminAgent("localhost", 4555, cwd);
+        //System.out.println(agent.getUserList()); // 사용자 목록이 출력되는지 확인
         return agent.getUserList();
     }
     
-    public int getNum1() {
-        return num1;
-    }
-    
-    public int getNum2() {
-        return num2;
-    }
     
     public String getCwd() {
         return cwd;
