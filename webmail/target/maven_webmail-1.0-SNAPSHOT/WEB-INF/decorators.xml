@@ -11,6 +11,12 @@
         <pattern>/delete_user.jsp</pattern>
     </decorator>
     
+    <decorator name="main_page" page="main_decorator.jsp">
+        <pattern>/admin_menu.jsp</pattern>
+        <pattern>/index.jsp</pattern>
+        <pattern>/main_menu.jsp</pattern>
+    </decorator>
+    
     <excludes>
         
     </excludes>

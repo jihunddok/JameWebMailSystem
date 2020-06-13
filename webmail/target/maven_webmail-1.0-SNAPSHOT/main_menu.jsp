@@ -46,7 +46,6 @@
     </head>
 
     <body>
-        <%@include file="header.jspf"%>
 
         <div id="sidebar">
             <jsp:include page="sidebar_menu.jsp" />
@@ -56,8 +55,6 @@
             ${pop3.getMessageList()} <!-- el표현식으로 변경 -->
             <%--= pop3.getMessageList() --%>
         </div>
-
-        <%@include file="footer.jspf"%>
 
     </body>
 </html>

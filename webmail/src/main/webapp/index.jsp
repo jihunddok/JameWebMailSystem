@@ -43,8 +43,6 @@
     </head>
 
     <body>
-        <%@include file="header.jsp"%>
-
 
         <div id="login_form">
             <form method="POST" action="Login.do?menu=<%= CommandType.LOGIN %>">
@@ -55,7 +53,5 @@
             </form>
         </div>
 
-
-        <%@include file="footer.jspf"%>
     </body>
 </html>

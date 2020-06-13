@@ -18,8 +18,7 @@
         <link type="text/css" rel="stylesheet" href="css/main_style.css" />
     </head>
     <body>
-        <%@include file="header.jspf"%>
-
+        
         <div id="sidebar">
             <jsp:include page="sidebar_admin_menu.jsp" />
         </div>
@@ -60,6 +59,5 @@
             </ul>
         </div>
 
-        <%@include file="footer.jspf"%>
     </body>
 </html>
