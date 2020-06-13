@@ -23,10 +23,10 @@
                    user="${user}" password="${password}" />
 
 <sql:query var="rs" dataSource="${dataSrc}">
-    SELECT user_nickname, user_email FROM ${table} WHERE user_id="${owner}"
+    SELECT friend_nickname, friend_email FROM ${table} WHERE user_id="${owner}"
 </sql:query>
 
-<table id="dtBasicExample" class="tb table table-striped table-bordered table-sm" cellspacing="0">
+<table id="dtBasicExample" class="tb table table-striped table-bordered table-sm center" cellspacing="0" >
     <thead>
         <tr>
             <th class="th-sm white-text" >이메일</th>
@@ -36,11 +36,18 @@
     </thead>
     <tbody>
         <c:forEach var="row" items="${rs.rows}">
-            <tr>
-                <td>${row.user_email}</td>
-                <td>${row.user_nickname}</td>
-                <td>삭제</td>
-            </tr>
-        </c:forEach>
-    </tbody>
+            <tr >
+                <td class="th-sm white-text center">${row.friend_email}</td>
+                <td class="th-sm white-text center">${row.friend_nickname}</td>
+                <td class="th-sm white-text center">
+                    <form action="DeleteFriend" method="POST" style="height: 50px;">
+                        <input type="checkbox" name="friend_email" value="${row.friend_email}" checked="checked" style="visibility: false;">
+                    <input class="btn-small transparent"  type="submit"  value="삭제" style="margin-bottom: 20%"/>
+                    </form>
+                </td>
+     
+
+    </tr>
+</c:forEach>
+</tbody>
 </table>

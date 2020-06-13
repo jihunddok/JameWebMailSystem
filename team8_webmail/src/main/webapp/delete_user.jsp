@@ -49,7 +49,7 @@ function getConfirmResult() {
         <jsp:setProperty name="userAgent" property="cwd" value="<%= cwd%>"/>
 
 
-        <form name="DeleteUser" action="UserAdmin.do?menu=<%=CommandType.DELETE_USER_COMMAND%>"method="POST">
+        <form name="DeleteUser" action="UserAdmin.do?menu=<%=CommandType.DELETE_USER_COMMAND%> " method="POST">
             <!--${userId}-->
             <c:forEach var="userId" items="${userAgent.getUserList()}">
                 <input type="checkbox" name="selectedUsers" value="${userId}"/>

@@ -18,7 +18,7 @@
         <%@include file="header.jspf"%>
 
         <div id="sidebar">
-            <jsp:include page="sidebar_admin_previous_menu.jsp" />
+                <jsp:include page="addrbook_sidebar.jsp" />
         </div>
 
         <div class="white-text" id="main" style=" float: left;width: 65%;margin-top:5%; margin-bottom : 5%; padding-right: 30%">

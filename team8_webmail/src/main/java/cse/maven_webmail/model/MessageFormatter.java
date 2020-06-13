@@ -31,7 +31,7 @@ public class MessageFormatter {
         // 메시지 제목 보여주기
         buffer.append("<div class=\"tb_wrap\">");
         buffer.append("<div class=\"tb_box\">");
-        buffer.append("<table id=\"dtBasicExample\" class=\"tb table table-striped table-bordered table-sm\" cellspacing=\"0\"> ");  // table start
+        buffer.append("<table id=\"dtBasicExample\" class=\"tb table table-striped table-bordered table-sm\" cellspacing=\"0\"> style=\"color:white;\"");  // table start
         buffer.append("<thead>"
                 + "<tr class=\"fixed_top\"> "
                 + " <th class=\"th-sm \" id=\"index_no\" style=\"color:white;\" > No. </td> "

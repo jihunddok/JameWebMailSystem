@@ -95,7 +95,7 @@
             xhr.send(id);
         }
         //비밀번호 확인 입력 인풋
-        const passwdReInput = document.getElementById('passwdRepeat')
+        const passwdReInput = document.getElementById('passwdRepeat');
         //비밀번호와 비밀번호 확인란이 같은지 체크
         function isPasswdMatched() {
             const passwd = document.getElementById('passwd').value;

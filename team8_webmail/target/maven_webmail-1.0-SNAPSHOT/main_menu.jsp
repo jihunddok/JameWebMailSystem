@@ -20,11 +20,12 @@
         <link href="css/mdb.min.css" rel="stylesheet">
         <link href="css/addons/datatables.min.css" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css" />
-      
+
         <!--<script src="js/materialize.js"></script>-->
         <!--<script src="js/init.js"></script>-->
 
         <style>
+
             th, td{
 
                 text-align: center;
@@ -61,27 +62,30 @@
 
     </body>
     <!-- JQuery -->
-    
+
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javasciprt" src="js/jquery.min.js"></script>
     <script type="text/javasciprt" src="js/popper.min.js"></script>
     <script type="text/javasciprt" src="js/bootstrap.min.js"></script>
     <script type="text/javasciprt" src="js/mdb.min.js"></script>
     <script type="text/javascript" src="js/addons/datatables.min.js"></script>
-        
+
     <script type="text/javascript">
+        
+
         $(document).ready(function () {
             $('#dtBasicExample').DataTable({
                 "pagingType": "first_last_numbers", // "simple" option for 'Previous' and 'Next' buttons only
                 "scrollY": "50vh",
                 "scrollCollapse": true,
+                "autoWidth" : true,
             });
 
             $('.dataTables_length').addClass('bs-select');
             $('.page-link').css('color', 'white');
+            
         });
 
 
     </script>
-
 </html>
