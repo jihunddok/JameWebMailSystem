@@ -1,5 +1,0 @@
-# JameWebMailSystem
-james webmail system
-
-
-##
