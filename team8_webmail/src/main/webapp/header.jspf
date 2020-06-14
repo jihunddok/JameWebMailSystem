@@ -1,0 +1,5 @@
+<div>
+    
+    <p class="white-text" style="font-style: bold; font-family: 'Sans-serif'; background-color: black"> &nbsp; Current Host : <%= session.getAttribute("host")%></p>
+
+</div>

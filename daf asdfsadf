@@ -1,0 +1,29 @@
+[33mcommit 05553e9f4b8d12ba2229db88f19a0aa1fc0669dc[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Zhim <jihunddok@gmail.com>
+Date:   Thu Jun 11 16:23:41 2020 +0900
+
+     git ignore
+
+[33mcommit 8bd610f2875c0f6288b0a33b7dd014ae6b2f3c39[m
+Author: Zhim <jihunddok@gmail.com>
+Date:   Thu Jun 11 16:22:06 2020 +0900
+
+    directory setting
+
+[33mcommit f7827f061acbeca098152caca9b4a786a442a016[m
+Author: Zhim <jihunddok@gmail.com>
+Date:   Fri May 22 21:01:16 2020 +0900
+
+    make branch zhim
+
+[33mcommit a47cdab2e05377e7a7e9231c830ba69c28d1a01a[m
+Author: Zhim <jihunddok@gmail.com>
+Date:   Thu May 14 20:31:40 2020 +0900
+
+    initial_commit for james settings...
+
+[33mcommit b1139fd643d40fd27da8b81a07b925ed8d1cec2f[m
+Author: jihunddok <49116558+jihunddok@users.noreply.github.com>
+Date:   Fri May 8 18:43:10 2020 +0900
+
+    Initial commit
