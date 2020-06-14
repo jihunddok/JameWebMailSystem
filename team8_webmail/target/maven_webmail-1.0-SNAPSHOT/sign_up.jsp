@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>회원가입</title>
-        <link type="text/css" rel="stylesheet" href="css/materialize.css" />
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css" />
     </head>
     <body style="height:100vh;">
         <%@include file="header.jspf"%>
@@ -41,7 +41,7 @@
                                     <input class="white-text" type="password" placeholder="repeat passwd" id="passwdRepeat"
                                            oninput="isPasswdMatched()" style="margin-bottom: 20%"/>
                                     <input class="btn-small grey" type="submit" value="Submit" id="btnSignUp" disabled style="margin-bottom: 20%"/>
-                                    <input class="btn-small grey" type="submit" value="Cancel" id="btnCancel" onclick="location.href = 'index.jsp'"  style="margin-bottom: 20%"/>
+                                    <input class="btn-small grey" type="button" value="Cancel" id="btnCancel" onclick="location.href = 'index.jsp'"  style="margin-bottom: 20%"/>
                                     
                                 </form>
                             </div>

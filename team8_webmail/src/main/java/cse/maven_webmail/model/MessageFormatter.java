@@ -98,7 +98,7 @@ public class MessageFormatter {
         buffer.append("<input type=\"hidden\" name=\"body\" value=\"").append(parser.getBody())
                 .append("\">");
         buffer.append("<br>");
-        buffer.append("<input type=\"button\" value=\"답장하기\">");
+        buffer.append("<input type=\"submit\" value=\"답장하기\">");
                 
         buffer.append("</form>");
 
